@@ -7,5 +7,5 @@ public class G_Postman {
     //    (굳이, 프론트에서 요청 코드를 작성하지 않더라도 피로세스에 대한 결과 확인 가능)
 
     // https://www.postman.com/downloads/
-    // : 
+    // : 사이트 접속 >> 운영체제에 맞는 시스템 설치
 }

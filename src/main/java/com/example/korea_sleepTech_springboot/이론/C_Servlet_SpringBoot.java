@@ -31,7 +31,7 @@ public class C_Servlet_SpringBoot {
     *       3) 결과를 반환 >> 스프링부트가 자동으로 HTTP 응답으로 만들어 보냄
     *
     *       cf) 서블릿에서는 직접 request와 response를 조작
-    *           스프링부트에서는 @RequestParam, @GetMapping 등의 애너테이션을 사용하여 간단한 HTTP 통신 처리
+    *           스프링부트에서는 @RequestParam, @GetMapping 등의 어노테이션을 사용하여 간단한 HTTP 통신 처리
     *
     * */
 }

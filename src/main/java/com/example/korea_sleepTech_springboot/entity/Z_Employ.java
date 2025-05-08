@@ -16,17 +16,18 @@ import lombok.Setter;
 public class Z_Employ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private long id;
+    private Long id;
 
     @Column(name = "name", nullable = false, length = 30)
     private String name;
 
-    @Column(name = "job", nullable = false)
-    private Z_Job job;
-
+    @Enumerated(EnumType.STRING)
     @Column(name = "position", nullable = false)
     private Z_Position position;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "job", nullable = false)
+    private Z_Job job;
 
     @Column(name = "salary", nullable = false)
     private long salary;

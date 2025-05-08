@@ -20,7 +20,7 @@ public class EmployController {
 
     @PostMapping
     public EmployResponseDto createEmploy(@RequestBody EmployCreateRequestDto requestDto){
-        EmployResponseDto createResponseDto = EmployService.createEmploy(requestDto);
+        EmployResponseDto createResponseDto = employService.createEmploy(requestDto);
 
         return createResponseDto;
     }
@@ -28,13 +28,13 @@ public class EmployController {
 
     @GetMapping
     public List<EmployResponseDto> allGetEmploy(){
-        List<EmployResponseDto> allGetResponseDto = EmployService.allGetEmploy();
+        List<EmployResponseDto> allGetResponseDto = employService.allGetEmploy();
         return allGetResponseDto;
     }
 
     @GetMapping("/{id}")
-    public EmployResponseDto findIdGetEmploy(@PathVariable long id){
-        EmployResponseDto findIdGetResponseDto = EmployService.findIdGetEmploy(id);
+    public EmployResponseDto findIdGetEmploy(@PathVariable Long id){
+        EmployResponseDto findIdGetResponseDto = employService.findIdGetEmploy(id);
 
         return findIdGetResponseDto;
 
@@ -42,15 +42,15 @@ public class EmployController {
 
 
     @PutMapping("/{id}")
-    public EmployResponseDto putEmploy(@PathVariable long id, @RequestBody EmployUpdateRequestDto requestDto){
-        EmployResponseDto putResponseDto = EmployService.putEmploy(id, requestDto);
+    public EmployResponseDto putEmploy(@PathVariable Long id, @RequestBody EmployUpdateRequestDto requestDto){
+        EmployResponseDto putResponseDto = employService.putEmploy(id, requestDto);
         return putResponseDto;
     }
 
 
     @DeleteMapping("/{id}")
-    public void deleteEmploy(@PathVariable long id){
-        EmployService.deleteEmploy(id);
+    public void deleteEmploy(@PathVariable Long id){
+        employService.deleteEmploy(id);
 
     }
 

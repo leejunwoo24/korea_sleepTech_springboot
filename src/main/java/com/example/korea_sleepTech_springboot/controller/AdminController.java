@@ -35,6 +35,8 @@ public class AdminController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping(PUT_AUTHORITY_DEMOTE)
+
+
     public ResponseEntity<ResponseDto<DemoteFromAdminResponseDto>> demoteUserFromAdmin(
             @RequestBody PutAuthorityToAdminRequestDto dto
     ){

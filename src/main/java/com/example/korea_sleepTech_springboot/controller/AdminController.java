@@ -22,7 +22,7 @@ public class AdminController {
 
     // == AdminController mappig pattern == //
     private static final String PUT_AUTHORITY_TO_ADMIN = "/promote";
-
+    private static final String PUT_AUTHORITY_DEMOTE = "/demote";
 
 
     @PutMapping( PUT_AUTHORITY_TO_ADMIN)
@@ -34,7 +34,7 @@ public class AdminController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping(PUT_AUTHORITY_TO_ADMIN)
+    @PutMapping(PUT_AUTHORITY_DEMOTE)
     public ResponseEntity<ResponseDto<DemoteFromAdminResponseDto>> demoteUserFromAdmin(
             @RequestBody PutAuthorityToAdminRequestDto dto
     ){
